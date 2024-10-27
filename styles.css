@@ -48,11 +48,20 @@ h1, h2 {
     transition: color 0.3s ease;
 }
 
-h1:hover, h2:hover,h3:hover {
+h2:hover,h3:hover {
     color: #2980b9;
 }
 h2:hover +.bar {
     background-color: #2980b9; /* separate rule, otherwise h2's background changes too! */
+}
+
+p{
+    font-size: 1rem;
+    color: pink;
+    font-weight: normal;
+    text-transform: lowercase;
+    letter-spacing: none;
+    padding-bottom: none;
 }
 
 .bar {
@@ -63,3 +72,9 @@ h2:hover +.bar {
     transition: color 0.3s ease;
     margin: 5px;
 }   
+
+
+.toggles{
+    display:none;
+    transition: 3s ease;
+}
