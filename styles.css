@@ -1,11 +1,12 @@
 .container {
     width: 90vw; /* 90% of the viewport width */
     max-width: 90vw; /* Set a max width for the container */
-    margin: 0 auto;   /* Center the container */
-    padding-left: 20vw; 
-    padding-right:20vw;  
+    margin: none;
+    padding-left: 5vw; 
+    padding-right:5vw;  
     padding-top: 5vh;
     padding-bottom: 5vh; /* Add some padding inside the container */
+    border: none;
     /*box-shadow: 0 2px 10px rgba(2, 53, 8, 0.762); /* Optional: add a shadow for depth */
 }
 
@@ -13,7 +14,7 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #f7f7f7;
     color: #333;
-    margin: 0;
+    margin: none;
 }
 
 h1 {
@@ -70,7 +71,7 @@ p{
     background-color: #2c3e50;
     margin-left: 1%; /* left align with a little hanging part */
     transition: color 0.3s ease;
-    margin: 5px;
+    margin: 3vh;
 }   
 
 
@@ -81,16 +82,17 @@ p{
 
 
 
-/* #gallery{
-    text-align: center;
-} */
 
 #gallery_image{
     width: 40vw;
     height: auto;
+    margin: 2vh none 2vh none;
 }
 
+#gallery_button_container{
+    margin-top: 10px;
+}
 #gallery button {
-    margin:10px;
+    margin:2%;
     fill: pink;
 }
