@@ -78,3 +78,19 @@ p{
     display:none;
     transition: 3s ease;
 }
+
+
+
+/* #gallery{
+    text-align: center;
+} */
+
+#gallery_image{
+    width: 40vw;
+    height: auto;
+}
+
+#gallery button {
+    margin:10px;
+    fill: pink;
+}

@@ -1,3 +1,7 @@
+
+// --------------------------------------------------------------------------------------------------------------------------------
+// Collapse Functionality
+// --------------------------------------------------------------------------------------------------------------------------------
 const HEADINGS = document.querySelectorAll('.header');
 
 HEADINGS.forEach(heading => {
@@ -13,4 +17,25 @@ HEADINGS.forEach(heading => {
     }
 });
 
+
+// --------------------------------------------------------------------------------------------------------------------------------
+// Image gallery
+// --------------------------------------------------------------------------------------------------------------------------------
+const images = ["assets\\adfc99df-c877-4a71-9c7e-9c7c9e469387.jpg","assets\\IMG_8383.JPEG"];
+let img_index =0;
+
+function updateImage() {
+    const imgElement =document.getElementById("gallery_image");
+    imgElement.src =images[img_index];
+}
+
+function prevImg() {
+    img_index=(img_index-1+images.length)%images.length
+    updateImage();
+}
+
+function nextImg() {
+    img_index=(img_index+1+images.length)%images.length
+    updateImage();
+}
 
