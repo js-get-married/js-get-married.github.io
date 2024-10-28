@@ -37,14 +37,14 @@ function updateImage(direction) {
     }
     // After animation, update the image and reset class
     setTimeout(() => {
-        imgElement.src = images[img_index];
         imgElement.classList.remove("slide-left", "slide-right");
+        imgElement.src = images[img_index];
     }, 1000); // Match with CSS transition duration
 
 }
 
 function startAutoUpdate() {
-    intervalId = setInterval(nextImg, 5000);
+    intervalId = setInterval(updateImage('next'), 5000);
 }
 
 function gallery_pause() {

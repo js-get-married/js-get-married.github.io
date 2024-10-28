@@ -130,9 +130,6 @@ p{
     z-index: 1;
   }
   
-#gallery button :hover {
-    background: rgba(255, 255, 255, 1); /* Slightly more opaque on hover */
-  }
   
 #gallery button.right{
   border-top-right-radius: 8px; 
