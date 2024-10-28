@@ -88,37 +88,41 @@ p{
 
 
 #gallery_image_container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+ 
     position: relative;
     height: 70vh;
-    width: auto;
-
+    width: 30vw ;
+    overflow: hidden;
 }
 
 
 #gallery_image{
+    transition: transform 1s ease;
+    position: absolute;
     height: 100%;
     width: auto;
-    margin: 2vh none 2vh none;
+}
+.slide-left {
+    transform: translateX(-100%); /* Slide to the left */
+}
+.slide-right {
+    transform: translateX(100%); /* Slide to the right */
 }
 
 
 #gallery button  {
     height: 100%;
     width: 5%;
-
+    position: relative;
     background: #19560481; 
     border: 1px solid rgba(255, 255, 255, 0.3); /* Soft border */
     color: #ffffff; 
-    backdrop-filter: blur(8px); /* Glassy blur effect */
-    transition: all 0.3s ease; 
+    backdrop-filter: blur(8px); 
+    z-index: 1;
   }
   
 #gallery button :hover {
-    background: rgba(255, 255, 255, 0.3); /* Slightly more opaque on hover */
-    transform: scale(1.05); /* Slight scale-up on hover */
+    background: rgba(255, 255, 255, 1); /* Slightly more opaque on hover */
   }
   
 #gallery button.right{

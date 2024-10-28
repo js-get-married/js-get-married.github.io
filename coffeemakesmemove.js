@@ -26,13 +26,23 @@ let img_index =0;
 let intervalId;
 let timeoutId;
 
-function updateImage() {
+function updateImage(direction) {
     const imgElement =document.getElementById("gallery_image");
-    imgElement.src =images[img_index];
+    if (direction === "next") {
+        imgElement.classList.add("slide-left"); // add css property based on direction, which then dictates slide transformation
+    } else if (direction === "prev") {
+        imgElement.classList.add("slide-right");
+    }
+    // After animation, update the image and reset class
+    setTimeout(() => {
+        imgElement.src = images[img_index];
+        imgElement.classList.remove("slide-left", "slide-right");
+    }, 1000); // Match with CSS transition duration
+
 }
 
 function startAutoUpdate() {
-    intervalId = setInterval(nextImg, 2000);
+    intervalId = setInterval(nextImg, 5000);
 }
 
 function gallery_pause() {
@@ -44,12 +54,12 @@ function gallery_pause() {
 
 function prevImg() {
     img_index=(img_index-1+images.length)%images.length
-    updateImage();  
+    updateImage(direction='previous');  
 }
 
 function nextImg() {
     img_index=(img_index+1+images.length)%images.length
-    updateImage();  
+    updateImage(direction='next');  
 }
 
 startAutoUpdate();
