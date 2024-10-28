@@ -85,16 +85,44 @@ p{
 }
 
 
-#gallery_image{
+#gallery_image_container{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: fit-content;
     width: auto;
     height: 70vh;
+
+}
+
+#gallery_image{
+    height: 100%;
+    width: auto;
     margin: 2vh none 2vh none;
 }
 
-#gallery_button_container{
-    margin-top: 10px;
-}
-#gallery button {
-    margin:2%;
-    fill: pink;
-}
+
+#gallery button  {
+    height: 100%;
+    width: auto;
+
+    background: #19560481; 
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Soft border */
+    color: #1e730224; 
+    backdrop-filter: blur(8px); /* Glassy blur effect */
+    transition: all 0.3s ease; 
+  }
+  
+#gallery button :hover {
+    background: rgba(255, 255, 255, 0.3); /* Slightly more opaque on hover */
+    transform: scale(1.05); /* Slight scale-up on hover */
+  }
+  
+#gallery button.right{
+  border-top-right-radius: 8px; 
+  border-bottom-right-radius: 8px; 
+  }
+#gallery button.left{
+  border-top-left-radius: 8px; 
+  border-bottom-left-radius: 8px; 
+ }
