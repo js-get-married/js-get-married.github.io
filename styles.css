@@ -11,6 +11,7 @@
     align-items: center;
     text-align: center;
     justify-content: center;
+    justify-items: center;
     align-content: center;
 }
 
@@ -71,6 +72,11 @@ p{
     padding-bottom: none;
 }
 
+.section{
+    width:100%;
+    justify-items: center;
+}
+
 .bar {
     width: 10%;
     height: 3px;
@@ -84,7 +90,6 @@ p{
 
 .toggles{
     display:none;
-    justify-items: center;
 }
 
 
