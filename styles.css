@@ -100,8 +100,8 @@ p{
     width: 70vw ;
 }
 .gallery-images{
-    display: flex;
-    position:relative;
+    display: grid;
+    grid-template-columns: 70vw  70vw  70vw ;
     overflow: hidden;
 }
 #gallery_image_container{
