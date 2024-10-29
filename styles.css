@@ -109,6 +109,8 @@ p{
     overflow: hidden;
     background:  rgba(192, 191, 191, 0.205);
     border-radius: 8px;
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
 }
 #gallery_image_container, #gallery_image_container_prev, #gallery_image_container_next{
     height: 70vh;
