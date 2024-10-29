@@ -117,7 +117,7 @@ p{
     width: 70vw ;
     justify-content: center;
     align-items: center;
-    left: 100%;
+    transform: translateX(100%)
 }
 #gallery_image_container_prev{
     position:flex;
