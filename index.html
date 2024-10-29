@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="coffeemakesmemove.js" defer></script>
+
+    <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+    <!-- Lightbox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
   </head>
   <body>
     <div class = "container">
@@ -57,7 +63,14 @@
         <h2 class="header">Photo Gallery</h2> 
         <div class="bar"></div>
         <div class = 'toggles'>     
-          <p>content here hello</p>
+          <div id="gallery">
+            <button class = "left" onclick="updateImage('prev'); gallery_pause()"> < </button>
+            <div id = "gallery_image_container"> 
+              <img id="gallery_image" src = "assets\\adfc99df-c877-4a71-9c7e-9c7c9e469387.jpg">
+            </div>
+            <button class = "right" onclick="updateImage('next') ; gallery_pause()">></button>
+          </div>
+
         </div>
       </div>
 
