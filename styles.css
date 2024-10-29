@@ -101,29 +101,31 @@ p{
 }
 .gallery-images{
     display: flex;
-    height: 70vh;
-    width: 70vw ;
+    position:relative;
+    overflow: hidden;
 }
 #gallery_image_container{
-    overflow: hidden;
-    position:block;
-    justify-self:center;
+    display: flex;
     height: 70vh;
     width: 70vw ;
+    justify-content: center;
+    align-items: center;
 }
 #gallery_image_container_next{
-    overflow: hidden;
-    position:block;
-    justify-self:center;
+    position:flex;
     height: 70vh;
     width: 70vw ;
+    justify-content: center;
+    align-items: center;
+    left: 100%;
 }
 #gallery_image_container_prev{
-    overflow: hidden;
-    position:block;
-    justify-self:center;
+    position:flex;
     height: 70vh;
-    width: 70vw ;
+    width: 70vw;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%)
 }
 
 #gallery_image{

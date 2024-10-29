@@ -36,7 +36,7 @@ function updateImage(direction) {
     const imgContainerPrev =document.getElementById("gallery_image_container_prev");
 
     if (direction === "init"){
-        imgElement.src = images[0];
+        imgElement.src = images[img_index];
         imgElementNext.src = images[(img_index+1+images.length)%images.length];
         imgElementPrev.src = images[(img_index-1+images.length)%images.length];
 
@@ -46,21 +46,28 @@ function updateImage(direction) {
         imgContainerPrev.classList.add("slide-left");
 
 
-        img_index=(img_index+1+images.length)%images.length
-        newImgElement.src = images[img_index];
+      //  img_index=(img_index+1+images.length)%images.length
+      //  newImgElement.src = images[img_index];
 
     } else if (direction === "prev") {
-        imgElement.classList.add("slide-right");
-        img_index=(img_index-1+images.length)%images.length
+        imgContainer.classList.add("slide-right"); // add css property based on direction, which then dictates slide transformation
+        imgContainerNext.classList.add("slide-right");
+        imgContainerPrev.classList.add("slide-right");
+
+       // img_index=(img_index-1+images.length)%images.length
     }
 
 
     // After animation, update the image and reset class
     setTimeout(() => {
-        imgElement.classList.remove("slide-left", "slide-right");
-        imgElement.parentElement.removeChild(newImgElement); // Remove the new image element from the DOM
-        imgElement.src = images[img_index]; // Now change the main image to the new address
-
+        img_index=(img_index+1+images.length)%images.length
+        
+        imgElement.src = images[img_index];
+        imgElementNext.src = images[(img_index+1+images.length)%images.length];
+        imgElementPrev.src = images[(img_index-1+images.length)%images.length];
+        imgContainer.classList.remove("slide-left", "slide-right");
+        imgContainer.classList.remove("slide-left", "slide-right");
+        imgContainer.classList.remove("slide-left", "slide-right");
     }, 1000); // Match with CSS transition duration
 
 }
