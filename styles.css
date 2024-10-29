@@ -103,6 +103,9 @@ p{
     display: grid;
     grid-template-columns: 70vw  70vw  70vw ;
     overflow: hidden;
+    background:  rgba(192, 191, 191, 0.205);
+    border-radius: 8px;
+
 }
 #gallery_image_container{
     position: flex;
@@ -159,8 +162,6 @@ p{
     }
 }
 
-
-
 .gallery button  {
     height: 70vh;
     width: 2.5%;
@@ -169,9 +170,7 @@ p{
     border: 1px solid rgba(255, 255, 255, 0.3); /* Soft border */
     color: #ffffff; 
     backdrop-filter: blur(8px); 
-    z-index: 2;
   }
-  
   
 .gallery button.right{
   border-top-right-radius: 8px; 
@@ -181,4 +180,5 @@ p{
 .gallery button.left{
   border-top-left-radius: 8px; 
   border-bottom-left-radius: 8px; 
+  justify-self: left;
  }
