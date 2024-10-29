@@ -61,13 +61,14 @@ function updateImage(direction) {
     // After animation, update the image and reset class
     setTimeout(() => {
         img_index=(img_index+1+images.length)%images.length
-        
+
         imgElement.src = images[img_index];
         imgElementNext.src = images[(img_index+1+images.length)%images.length];
         imgElementPrev.src = images[(img_index-1+images.length)%images.length];
+
         imgContainer.classList.remove("slide-left", "slide-right");
-        imgContainer.classList.remove("slide-left", "slide-right");
-        imgContainer.classList.remove("slide-left", "slide-right");
+        imgContainerNext.classList.remove("slide-left", "slide-right");
+        imgContainerPrev.classList.remove("slide-left", "slide-right");
     }, 1000); // Match with CSS transition duration
 
 }
