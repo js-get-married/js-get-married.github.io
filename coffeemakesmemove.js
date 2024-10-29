@@ -39,22 +39,14 @@ function updateImage(direction) {
         imgElement.src = images[img_index];
         imgElementNext.src = images[(img_index+1+images.length)%images.length];
         imgElementPrev.src = images[(img_index-1+images.length)%images.length];
-
     } else if (direction === "next") {
         imgContainer.classList.add("slide-left"); // add css property based on direction, which then dictates slide transformation
         imgContainerNext.classList.add("slide-left");
         imgContainerPrev.classList.add("slide-left");
-
-
-      //  img_index=(img_index+1+images.length)%images.length
-      //  newImgElement.src = images[img_index];
-
     } else if (direction === "prev") {
         imgContainer.classList.add("slide-right"); // add css property based on direction, which then dictates slide transformation
         imgContainerNext.classList.add("slide-right");
         imgContainerPrev.classList.add("slide-right");
-
-       // img_index=(img_index-1+images.length)%images.length
     }
 
 

@@ -94,71 +94,54 @@ p{
 }
 
 
+
+
+
 .gallery{
     display: grid;
+    grid-template-columns: auto auto auto;
     height: 70vh;
     width: 70vw ;
 }
 .gallery-images{
     display: grid;
-    grid-template-columns: 70vw  70vw  70vw ;
+    grid-template-columns: auto auto auto;
     overflow: hidden;
     background:  rgba(192, 191, 191, 0.205);
     border-radius: 8px;
-
 }
-#gallery_image_container{
-    position: flex;
+#gallery_image_container, #gallery_image_container_prev, #gallery_image_container_next{
     height: 70vh;
     width: 70vw ;
-    justify-content: center;
-    align-items: center;
 }
-#gallery_image_container_next{
-    position:flex;
-    height: 70vh;
-    width: 70vw ;
-    justify-content: center;
-}
-#gallery_image_container_prev{
-    position:flex;
-    height: 70vh;
-    width: 70vw;
-    justify-content: center;
-}
-
-#gallery_image{
-    object-position: center;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-#gallery_image_next{
-    object-position: center;
-    max-width: 100%;
-    max-height: 100%;
-}
-
-#gallery_image_prev{
-    object-position: center;
+#gallery_image, #gallery_image_next, #gallery_image_prev {
     max-width: 100%;
     max-height: 100%;
 }
 
 
 .slide-left {
-    animation: slideOut 1s forwards; /* Slide to the left */
+    animation: slideLeft 1s forwards; /* Slide to the left */
 }
 .slide-right {
-    animation: slideOut 1s backwards; /* Slide to the right */
+    animation: slideRight 1s forwards; /* Slide to the right */
 }
 
-@keyframes slideOut {
+@keyframes slideLeft {
     from {
         transform: translateX(0); /* Start position */
     }
     to {
         transform: translateX(-100%); /* End position */
+    }
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(0); /* Start position */
+    }
+    to {
+        transform: translateX(100%); /* End position */
     }
 }
 
@@ -170,6 +153,7 @@ p{
     border: 1px solid rgba(255, 255, 255, 0.3); /* Soft border */
     color: #ffffff; 
     backdrop-filter: blur(8px); 
+    z-index: 1;
   }
   
 .gallery button.right{
