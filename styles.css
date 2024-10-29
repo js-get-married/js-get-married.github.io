@@ -99,6 +99,11 @@ p{
     height: 70vh;
     width: 70vw ;
 }
+.gallery-images{
+    display: flex;
+    height: 70vh;
+    width: 70vw ;
+}
 #gallery_image_container{
     overflow: hidden;
     position:block;
