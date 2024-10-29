@@ -30,12 +30,15 @@ function updateImage(direction) {
     const imgElement =document.getElementById("gallery_image");
     const newImgElement = document.createElement("img");
 
+    imgElement.parentElement.appendChild(newImgElement);
+    newImgElement.classList.add("new_gallery_image");
+
     if (direction === "init"){
         imgElement.src = images[0]
 
     } else if (direction === "next") {
         imgElement.classList.add("slide-left"); // add css property based on direction, which then dictates slide transformation
-        newImgElement.classList.add("slide-left", "new_gallery_image"); 
+        newImgElement.classList.add("slide-right"); 
 
         img_index=(img_index+1+images.length)%images.length
         newImgElement.src = images[img_index];
@@ -45,13 +48,13 @@ function updateImage(direction) {
         img_index=(img_index-1+images.length)%images.length
     }
 
-    imgElement.parentElement.appendChild(newImgElement);
+
     // After animation, update the image and reset class
     setTimeout(() => {
-        imgElement.src = images[img_index]; // Now change the main image to the new address
-        imgElement.classList.remove("slide-left", "slide-right");
         imgElement.classList.remove("slide-left", "slide-right");
         imgElement.parentElement.removeChild(newImgElement); // Remove the new image element from the DOM
+        imgElement.src = images[img_index]; // Now change the main image to the new address
+
     }, 1000); // Match with CSS transition duration
 
 }

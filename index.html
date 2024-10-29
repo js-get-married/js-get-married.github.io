@@ -63,10 +63,16 @@
         <h2 class="header">Photo Gallery</h2> 
         <div class="bar"></div>
         <div class = 'toggles'>     
-          <div id="gallery">
+          <div class="gallery">
             <button class = "left" onclick="updateImage('prev')"> < </button>
+            <div id = "gallery_image_container_prev"> 
+              <img id="gallery_image_prev">
+            </div>
             <div id = "gallery_image_container"> 
               <img id="gallery_image">
+            </div>
+            <div id = "gallery_image_container_next"> 
+              <img id="gallery_image_next">
             </div>
             <button class = "right" onclick="updateImage('next')">></button>
           </div>
