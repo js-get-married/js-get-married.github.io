@@ -103,18 +103,28 @@ p{
     overflow: hidden;
     position:relative;
     justify-self:center;
+    height: 70vh;
+    width: 70vw ;
 }
 
 #gallery_image{
-    transition: transform 1s ease;
     object-position: center;
-    width:100%;
-    height:100%;
+    max-width: 100%;
+    max-height: 100%;
 }
+.new_gallery_image{
+    object-position: center;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
 .slide-left {
+    transition: transform 1s ease;
     transform: translateX(-100%); /* Slide to the left */
 }
 .slide-right {
+    transition: transform 1s ease;
     transform: translateX(100%); /* Slide to the right */
 }
 
