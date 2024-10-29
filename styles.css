@@ -116,7 +116,6 @@ p{
     height: 70vh;
     width: 70vw ;
     justify-content: center;
-    align-items: center;
     transform: translateX(100%)
 }
 #gallery_image_container_prev{
@@ -124,7 +123,6 @@ p{
     height: 70vh;
     width: 70vw;
     justify-content: center;
-    align-items: center;
     transform: translateX(-100%)
 }
 
@@ -148,12 +146,19 @@ p{
 
 
 .slide-left {
-    transition: transform 1s ease;
-    transform: translateX(-100%); /* Slide to the left */
+    animation: slideOut 1s forwards; /* Slide to the left */
 }
 .slide-right {
-    transition: transform 1s ease;
-    transform: translateX(100%); /* Slide to the right */
+    animation: slideOut 1s backwards; /* Slide to the right */
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0); /* Start position */
+    }
+    to {
+        transform: translateX(-100%); /* End position */
+    }
 }
 
 
