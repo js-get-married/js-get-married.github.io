@@ -105,7 +105,7 @@ p{
     overflow: hidden;
 }
 #gallery_image_container{
-    display: flex;
+    position: flex;
     height: 70vh;
     width: 70vw ;
     justify-content: center;
@@ -116,14 +116,12 @@ p{
     height: 70vh;
     width: 70vw ;
     justify-content: center;
-    transform: translateX(100%)
 }
 #gallery_image_container_prev{
     position:flex;
     height: 70vh;
     width: 70vw;
     justify-content: center;
-    transform: translateX(-100%)
 }
 
 #gallery_image{
