@@ -28,17 +28,23 @@ let timeoutId;
 
 function updateImage(direction) {
     const imgElement =document.getElementById("gallery_image");
-    const newImgElement = document.createElement("img");
+    const imgElementNext =document.getElementById("gallery_image_next");
+    const imgElementPrev =document.getElementById("gallery_image_prev");
 
-    imgElement.parentElement.appendChild(newImgElement);
-    newImgElement.classList.add("new_gallery_image");
+    const imgContainer =document.getElementById("gallery_image_container");
+    const imgContainerNext =document.getElementById("gallery_image_container_next");
+    const imgContainerPrev =document.getElementById("gallery_image_container_prev");
 
     if (direction === "init"){
-        imgElement.src = images[0]
+        imgElement.src = images[0];
+        imgElementNext.src = images[(img_index+1+images.length)%images.length];
+        imgElementPrev.src = images[(img_index-1+images.length)%images.length];
 
     } else if (direction === "next") {
-        imgElement.classList.add("slide-left"); // add css property based on direction, which then dictates slide transformation
-        newImgElement.classList.add("slide-right"); 
+        imgContainer.classList.add("slide-left"); // add css property based on direction, which then dictates slide transformation
+        imgContainerNext.classList.add("slide-left");
+        imgContainerPrev.classList.add("slide-left");
+
 
         img_index=(img_index+1+images.length)%images.length
         newImgElement.src = images[img_index];
