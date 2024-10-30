@@ -1,6 +1,6 @@
 #container {
     max-width: 100vw; /* Set a max width for the container */
-    margin: none;
+    padding-top: 7.5vh;
     padding-left: 5vw; 
     padding-right:5vw;  
     padding-bottom: 5vh; /* Add some padding inside the container */
@@ -91,25 +91,33 @@ p{
 
 
 .navbar {
-    background-color: #333; /* Dark background */
-    overflow: hidden; /* Clear floats */
+    background-color: #333;
     position: fixed;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 7.5vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
+
 .navbar button {
-    float: left; /* Align links to the left */
-    display: block; /* Make links block elements */
-    color: rgb(35, 37, 143); /* White text color */
-    text-align: center; /* Center text */
-    padding: 14px 16px; /* Padding around links */
-    text-decoration: none; /* Remove underline */
+    flex: 1;
+    color: #fff; /* Dark green text */
+    background-color: rgba(0, 51, 0, 0.4); /* Translucent dark green */
+    border: 1px solid rgba(0, 51, 0, 0.8); /* Dark green thin border */
+    text-align: center;
+    height:7.5vh;
+    font-size: clamp(0.8rem, 1.5vw, 1.2rem); /* Responsive font size */
+    text-decoration: none;
+    transition: all 0.3s ease; /* Smooth hover transition */
+    cursor: pointer;
 }
-.navbar a:hover {
-    background-color: #ddd; /* Light background on hover */
-    color: black; /* Change text color on hover */
+
+.navbar button:hover {
+    background-color: rgba(0, 51, 0, 0.8); /* Solid dark green on hover */
+    color: #fff; /* White text on hover */
 }
 
 
