@@ -2,22 +2,16 @@
 // --------------------------------------------------------------------------------------------------------------------------------
 // Collapse Functionality
 // --------------------------------------------------------------------------------------------------------------------------------
-const HEADINGS = document.querySelectorAll('.header');
-
-HEADINGS.forEach(heading => {
-    heading.onclick = function() {
-        const section =heading.closest('.section')
-        section.querySelectorAll('.toggles').forEach(content=>{
-        if (content.style.display === 'none') {
-            content.style.display = 'block'; 
-        } else if (content.style.display === 'block'){
-            content.style.display = 'none';
-        } else{content.style.display = 'block'}
-    });
+document.addEventListener('click', (event) => {
+    // Check if the clicked element has the 'header' class
+    if (event.target.classList.contains('header')) {
+        const section = event.target.closest('.section');
+        section.querySelectorAll('.toggles').forEach(content => {
+            // Toggle display
+            content.style.display = (content.style.display === 'none' || content.style.display === '') ? 'block' : 'none';
+        });
     }
 });
-
-
 
 // --------------------------------------------------------------------------------------------------------------------------------
 // Load Content
