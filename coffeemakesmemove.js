@@ -18,6 +18,31 @@ HEADINGS.forEach(heading => {
 });
 
 
+
+// --------------------------------------------------------------------------------------------------------------------------------
+// Load Content
+// -------------------------------------------------------------------------------------------------------------------------------
+const NAVBUTTONS = document.querySelectorAll('.navbutton');
+
+NAVBUTTONS.forEach(navbutton => {
+    navbutton.onclick = function() {
+    // Use fetch to load content.html into the div
+    fetch('./subpages/photo_gallery.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('test-content').innerHTML = data; // Load the content
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+}});
+
+
 // --------------------------------------------------------------------------------------------------------------------------------
 // Image gallery
 // --------------------------------------------------------------------------------------------------------------------------------
