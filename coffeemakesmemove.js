@@ -19,16 +19,10 @@ document.addEventListener('click', (event) => {
 const NAVBUTTONS = document.querySelectorAll('.navbar button');
 
 const pageMap = {
-    'home':'./subpages/home.html',
     'rsvp': './subpages/rsvp.html',
     'photo-gallery': './subpages/photo_gallery.html',
-    'rsvp': './subpages/rsvp.html',
     'info': './subpages/information.html',
-    'logistics': './subpages/logistics.html',
-    'team': './subpages/team.html',
-    'gifts': './subpages/gifts.html',
     'faq': './subpages/faq.html',
-    'contact': './subpages/contact.html',
 };
 
 let pagerequested = 'home'
