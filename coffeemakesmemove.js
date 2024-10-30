@@ -36,6 +36,7 @@ NAVBUTTONS.forEach(navbutton => {
         })
         .then(data => {
             document.getElementById('test-content').innerHTML = data; // Load the content
+            updateImage('init')
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
