@@ -1,0 +1,39 @@
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="coffeemakesmemove.js" defer></script>
+
+  </head>
+  <body>
+    <div class = "container">
+      <div class=" section">
+        <h2 class="header">Photo Gallery</h2> 
+        <div class="bar"></div>
+        <div class = 'toggles'>     
+          <div class="gallery">
+            <button class = "left" onclick="updateImage('prev')"> < </button>
+            <div class = gallery-images> 
+              <div id = "gallery_image_container_prev"> 
+                <img id="gallery_image_prev">
+              </div>
+              <div id = "gallery_image_container"> 
+                <img id="gallery_image">
+              </div>
+              <div id = "gallery_image_container_next"> 
+                <img id="gallery_image_next">
+              </div>
+            </div>
+            <button class = "right" onclick="updateImage('next')">></button>
+          </div>
+
+        </div>
+      </div>
+
+      
+    </div>
+  </body>
+</html>
+
