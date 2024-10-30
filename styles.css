@@ -91,6 +91,28 @@ p{
 }
 
 
+.navbar {
+    background-color: #333; /* Dark background */
+    overflow: hidden; /* Clear floats */
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 7.5vh;
+}
+.navbar a {
+    float: left; /* Align links to the left */
+    display: block; /* Make links block elements */
+    color: white; /* White text color */
+    text-align: center; /* Center text */
+    padding: 14px 16px; /* Padding around links */
+    text-decoration: none; /* Remove underline */
+}
+.navbar a:hover {
+    background-color: #ddd; /* Light background on hover */
+    color: black; /* Change text color on hover */
+}
+
 
 
 
