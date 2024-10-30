@@ -1,4 +1,4 @@
-.container {
+#container {
     width: 90vw; /* 90% of the viewport width */
     max-width: 90vw; /* Set a max width for the container */
     margin: none;

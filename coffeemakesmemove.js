@@ -56,7 +56,7 @@ if (pageMap[navbutton.id]) {
             return response.text();
         })
         .then(data => {
-            document.getElementById('test-content').innerHTML = data; // Load the content
+            document.getElementById('container').innerHTML = data; // Load the content
             updateImage('init')
         })
         .catch(error => {
