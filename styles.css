@@ -120,10 +120,10 @@ p{
 
 
 .slide-left {
-    animation: slideLeft 1s forwards; /* Slide to the left */
+    animation: slideLeft 1s forwards; 
 }
 .slide-right {
-    animation: slideRight 1s forwards; /* Slide to the right */
+    animation: slideRight 1s forwards; /* cubic-bezier(0.21, 0.37, 0.36, 0.99); */
 }
 
 @keyframes slideLeft {

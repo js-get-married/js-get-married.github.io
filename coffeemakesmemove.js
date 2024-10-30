@@ -21,7 +21,11 @@ HEADINGS.forEach(heading => {
 // --------------------------------------------------------------------------------------------------------------------------------
 // Image gallery
 // --------------------------------------------------------------------------------------------------------------------------------
-const images = ["assets\\adfc99df-c877-4a71-9c7e-9c7c9e469387.jpg","assets\\IMG_8383.JPEG","assets\\cute boat first year.jpg"];
+
+// This object is generated programatically by a python script in utils
+const images = ["assets\\big squad first year.jpg","assets\\boat first year.jpg","assets\\cute boat first year.jpg","assets\\cutest boat first year.jpg","assets\\cutest fancy second year.jpg","assets\\lost 2 the lostening.jpg","assets\\Lost.jpg","assets\\more best boat first year.jpg","assets\\paint bop.jpg","assets\\The original cc-rew second year fancy.jpg",]; 
+//
+
 let img_index =0;
 let intervalId;
 let timeoutId;
