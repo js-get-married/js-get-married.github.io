@@ -100,10 +100,10 @@ p{
     width: 100%;
     height: 7.5vh;
 }
-.navbar a {
+.navbar button {
     float: left; /* Align links to the left */
     display: block; /* Make links block elements */
-    color: white; /* White text color */
+    color: rgb(35, 37, 143); /* White text color */
     text-align: center; /* Center text */
     padding: 14px 16px; /* Padding around links */
     text-decoration: none; /* Remove underline */

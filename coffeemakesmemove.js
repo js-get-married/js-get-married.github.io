@@ -22,12 +22,20 @@ HEADINGS.forEach(heading => {
 // --------------------------------------------------------------------------------------------------------------------------------
 // Load Content
 // -------------------------------------------------------------------------------------------------------------------------------
-const NAVBUTTONS = document.querySelectorAll('.navbutton');
+const NAVBUTTONS = document.querySelectorAll('.navbar button');
 
 NAVBUTTONS.forEach(navbutton => {
+
     navbutton.onclick = function() {
+    let pagerequested;
     // Use fetch to load content.html into the div
-    fetch('./subpages/photo_gallery.html')
+    if(navbutton.id === 'photo-gallery'){
+        pagerequested ='./subpages/photo_gallery.html';
+    } else {
+        return; // Exit if the condition is not met
+    }
+
+    fetch(pagerequested)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
