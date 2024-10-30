@@ -24,13 +24,9 @@ HEADINGS.forEach(heading => {
 // -------------------------------------------------------------------------------------------------------------------------------
 const NAVBUTTONS = document.querySelectorAll('.navbar button');
 
-NAVBUTTONS.forEach(navbutton => {
-
-    navbutton.onclick = function() {
-    let pagerequested;
-    // Use fetch to load content.html into the div
-    // Map of navbutton IDs to their corresponding page URLs
 const pageMap = {
+    'home':'./subpages/home.html',
+    'rsvp': './subpages/rsvp.html',
     'photo-gallery': './subpages/photo_gallery.html',
     'rsvp': './subpages/rsvp.html',
     'info': './subpages/information.html',
@@ -41,27 +37,32 @@ const pageMap = {
     'contact': './subpages/contact.html',
 };
 
-// Check if the navbutton.id exists in the pageMap
-if (pageMap[navbutton.id]) {
-    pagerequested = pageMap[navbutton.id]; // Assign the corresponding page URL
-} else {
-    return; // Exit if the condition is not met
-}
+let pagerequested = 'home'
 
-    fetch(pagerequested)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.text();
-        })
-        .then(data => {
-            document.getElementById('container').innerHTML = data; // Load the content
-            updateImage('init')
-        })
-        .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
-        });
+
+NAVBUTTONS.forEach(navbutton => {
+    navbutton.onclick = function() {
+// Check if the navbutton.id exists in the pageMap
+    if (pageMap[navbutton.id]) {
+        pagerequested = pageMap[navbutton.id]; // Assign the corresponding page URL
+    } else {
+        pagerequested = pageMap['home'];; // Exit if the condition is not met
+    }
+
+        fetch(pagerequested)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('container').innerHTML = data; // Load the content
+                updateImage('init')
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
 }});
 
 
