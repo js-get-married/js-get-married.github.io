@@ -29,11 +29,24 @@ NAVBUTTONS.forEach(navbutton => {
     navbutton.onclick = function() {
     let pagerequested;
     // Use fetch to load content.html into the div
-    if(navbutton.id === 'photo-gallery'){
-        pagerequested ='./subpages/photo_gallery.html';
-    } else {
-        return; // Exit if the condition is not met
-    }
+    // Map of navbutton IDs to their corresponding page URLs
+const pageMap = {
+    'photo-gallery': './subpages/photo_gallery.html',
+    'rsvp': './subpages/rsvp.html',
+    'info': './subpages/information.html',
+    'logistics': './subpages/logistics.html',
+    'team': './subpages/team.html',
+    'gifts': './subpages/gifts.html',
+    'faq': './subpages/faq.html',
+    'contact': './subpages/contact.html',
+};
+
+// Check if the navbutton.id exists in the pageMap
+if (pageMap[navbutton.id]) {
+    pagerequested = pageMap[navbutton.id]; // Assign the corresponding page URL
+} else {
+    return; // Exit if the condition is not met
+}
 
     fetch(pagerequested)
         .then(response => {
