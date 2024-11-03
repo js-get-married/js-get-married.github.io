@@ -166,11 +166,12 @@ p{
 
 .gallery{
     display: grid;
-    grid-template-columns: 5vw auto 5vw;
+    grid-template-columns: 5% 90% 5%;
     height: 100%;
     width: 100%;
 }
 .gallery-images{
+    position:relative;
     grid-column: 2;
     height: 100%;
     width: 100%;
@@ -236,11 +237,15 @@ p{
 
   
 .gallery button.right{
+    
+  position:relative;
   border-top-right-radius: 8px; 
   border-bottom-right-radius: 8px; 
   grid-column:3;
   }
 .gallery button.left{
+    
+  position:relative;
   border-top-left-radius: 8px; 
   border-bottom-left-radius: 8px; 
   grid-column:1;
