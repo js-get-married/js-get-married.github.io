@@ -20,6 +20,7 @@ body, html {
 
 .header{
     grid-row: 1;
+    position:relative;
 }
 
 #container {
@@ -42,15 +43,14 @@ body, html {
 
 
 /* Navbar container styling */
-.navbar {
-    position: fixed;
-    justify-items: center;
-    width: 70%;
-    height: 10vh;
+.navbar {   
+    position: absolute;
+    display: flex; /* keeps buttons in middle?*/
     
-    left: 30vh;
-    display: flex;
-    justify-content: space-around;
+    left: 15%;
+    width: 70%;
+    height: 100%;
+  
     align-items: center;
     padding-left:  1rem; 
     padding-right: 1rem;
