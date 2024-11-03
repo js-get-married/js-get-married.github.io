@@ -1,3 +1,15 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: none;
+    
+    /* Global
+    display: flex;
+    justify-content: center;
+    align-items: center;*/
+}
+
 #container {
     width:100%; 
     max-width: 90vw; /* Set a max width for the container */
@@ -12,87 +24,6 @@
     justify-content: center;
     justify-items: center;
     align-content: center;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
-    color: #333;
-    margin: none;
-    
-    /* Global
-    display: flex;
-    justify-content: center;
-    align-items: center;*/
-}
-
-h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #2c3e50;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding-top: 40px;
-    text-align: center;
-}
-
-h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #2c3e50;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding-bottom: 10px;
-}
-
-h3 {
-    font-size: 1.5rem;
-    font-weight: normal;
-    color: #34495e;
-    margin-bottom: 2%;
-}
-
-h2, h3 {
-    transition: color 0.3s ease;
-}
-
-h2:hover,h3:hover {
-    color: #2980b9;
-}
-h2:hover +.bar {
-    background-color: #2980b9; /* separate rule, otherwise h2's background changes too! */
-}
-
-p{
-    font-size: 1rem;
-    color: pink;
-    font-weight: normal;
-    text-transform: lowercase;
-    letter-spacing: none;
-    padding-bottom: none;
-}
-
-.section{
-    width:100%;
-    justify-items: center;
-    justify-content: center;
-}
-
-.bar {
-    width: 10%;
-    height: 3px;
-    background-color: #2c3e50;
-    /* margin-left: 1%; /* left align with a little hanging part */
-    margin: 3vh;
-    display: flex;
-    justify-self: center;
-}   
-
-
-.toggles{
-    display:none;
 }
 
 /* Navbar container styling */
@@ -151,7 +82,75 @@ p{
     border-radius: 8px;
 }
 
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-top: 40px;
+    text-align: center;
+}
 
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #34495e;
+    margin-bottom: 2%;
+}
+
+h2, h3 {
+    transition: color 0.3s ease;
+}
+
+h2:hover,h3:hover {
+    color: #2980b9;
+}
+h2:hover +.bar {
+    background-color: #2980b9; /* separate rule, otherwise h2's background changes too! */
+}
+
+p{
+    font-size: 1rem;
+    color: pink;
+    font-weight: normal;
+    text-transform: lowercase;
+    letter-spacing: none;
+    padding-bottom: none;
+}
+
+
+.section{
+    width:100%;
+    justify-items: center;
+    justify-content: center;
+}
+
+.bar {
+    width: 10%;
+    height: 3px;
+    background-color: #2c3e50;
+    /* margin-left: 1%; /* left align with a little hanging part */
+    margin: 3vh;
+    display: flex;
+    justify-self: center;
+}   
+
+
+.toggles{
+    display:none;
+}
 
 
 .gallery{
