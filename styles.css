@@ -21,6 +21,7 @@ body, html {
 .header{
     grid-row: 1;
     position:relative;
+    padding-bottom: 2vh;
 }
 
 #container {
@@ -28,7 +29,6 @@ body, html {
     position:relative;
     width:100%; 
     height:100%;
-    padding-top: 2vh;
     padding-left: 5vw; 
     padding-right:5vw;  
 
@@ -169,10 +169,8 @@ p{
     grid-template-columns: 5vw auto 5vw;
     height: 100%;
     width: 100%;
-    padding-bottom: 2vh;
 }
 .gallery-images{
-    position:flex;
     grid-column: 2;
     height: 100%;
     width: 100%;
@@ -182,8 +180,10 @@ p{
     grid-template-columns: 100% 100% 100%;
     overflow: hidden;
     background:  rgba(192, 191, 191, 0.205);
-    justify-content: center; /* start on missle picture*/
+    justify-content: center; 
     /*border-radius: 8px;*/ 
+    
+    align-content: center;
 
 }
 #gallery_image_container, #gallery_image_container_prev, #gallery_image_container_next{
