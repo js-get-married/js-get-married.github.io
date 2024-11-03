@@ -1,16 +1,30 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
     font-family: 'Arial', sans-serif;
     background-color: #f7f7f7;
     color: #333;
-    margin: none;
     
+    display: grid;
+    grid-template-rows: 10vh 1fr; /* 15% for the top bar, remaining for main content */
+    height: 100vh; /* Full viewport height */
     /* Global
     display: flex;
     justify-content: center;
     align-items: center;*/
 }
 
+.header{
+    grid-row: 1;
+}
+
 #container {
+    grid-row: 2;
+
     width:100%; 
     max-width: 90vw; /* Set a max width for the container */
     max-height: 90vw;
@@ -25,6 +39,7 @@ body {
     justify-items: center;
     align-content: center;
 }
+
 
 /* Navbar container styling */
 .navbar {
