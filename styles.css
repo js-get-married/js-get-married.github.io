@@ -25,20 +25,17 @@ body, html {
 
 #container {
     grid-row: 2;
-
+    position:relative;
     width:100%; 
-    max-width: 90vw; /* Set a max width for the container */
-    max-height: 90vw;
-    padding-top: 10vh;
+    padding-top: 2vh;
     padding-left: 5vw; 
     padding-right:5vw;  
+
     border: none;
-    /*box-shadow: 0 2px 10px rgba(2, 53, 8, 0.762); /* Optional: add a shadow for depth */
-    align-items: center;
     text-align: center;
     justify-content: center;
     justify-items: center;
-    align-content: center;
+    align-content: top;
 }
 
 
@@ -52,8 +49,6 @@ body, html {
     height: 100%;
   
     align-items: center;
-    padding-left:  1rem; 
-    padding-right: 1rem;
     box-sizing: border-box;
 }
 
@@ -68,11 +63,11 @@ body, html {
 }
 
 .navbar:before {
-    top: 0; /* Position top bar */
+    top: 1vh; /* Position top bar */
 }
 
 .navbar:after {
-    bottom: 0; /* Position bottom bar */
+    bottom: 1vh; /* Position bottom bar */
 }
 
 /* Button styling */
