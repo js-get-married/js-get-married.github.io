@@ -166,8 +166,9 @@ p{
 .gallery{
     display: grid;
     grid-template-columns: auto auto auto;
-    height: 90vh;
-    width: 90vw ;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 2vh;
 }
 .gallery-images{
     display: grid;
@@ -179,8 +180,8 @@ p{
     align-items: center; /* Center text vertically */
 }
 #gallery_image_container, #gallery_image_container_prev, #gallery_image_container_next{
-    height: 90vh;
-    width: 90vw ;
+    height: 100%;
+    width: 100%;
 }
 #gallery_image, #gallery_image_next, #gallery_image_prev {
     max-width: 100%;
