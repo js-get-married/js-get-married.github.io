@@ -259,3 +259,9 @@ p{
  }
 
  
+
+ @media (max-width: 768px) and (orientation: landscape) {
+    .hide-on-mobile {
+        display: none; /* Hides the div on mobile portrait */
+    }
+}
