@@ -10,7 +10,7 @@ body, html {
     color: #333;
     
     display: grid;
-    grid-template-rows: 10vh 90vh; /* 15% for the top bar, remaining for main content */
+    grid-template-rows: 10vh 85vh; /* 15% for the top bar, remaining for main content */
     height: 100vh; /* Full viewport height */
     /* Global
     display: flex;
@@ -42,6 +42,7 @@ body, html {
 
 /* Navbar container styling */
 .navbar {   
+    grid-row:2;
     position: absolute;
     display: flex; /* keeps buttons in middle?*/
     
@@ -65,20 +66,22 @@ body, html {
 
 .navbar:before {
     top: 1vh; /* Position top bar */
+    grid-row: 1;
 }
 
 .navbar:after {
     bottom: 1vh; /* Position bottom bar */
+    
+    grid-row: 3;
 }
 
 /* Button styling */
 .navbar button {
+    height: 50%;
     flex: 1;
     color: #059203bd;
     background-color: transparent;
     border: none;
-    padding: 0.5rem 1rem;
-    margin: 0 0.5rem; /* Adds space between buttons and navbar edges */
     border-radius: 5px;
     font-size: clamp(0.8rem, 1.5vw, 1.2rem);
     text-align: center;
