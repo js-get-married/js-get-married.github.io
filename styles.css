@@ -164,7 +164,25 @@ p{
 
 .toggles{
     display:none;
+    height: 500;
 }
+
+.hero {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('assets\\cute boat first year.jpg'); /* Replace with actual image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Fixes the image position */
+    color: white;
+    text-align: center;
+  }
+
+
+
+
 
 
 .gallery{
