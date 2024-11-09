@@ -43,15 +43,15 @@ body, html {
 /* Navbar container styling */
 .navbar {   
     grid-row:2;
-    position: absolute;
+    position: fixed;
     display: flex; /* keeps buttons in middle?*/
     
-    left: 15%;
-    width: 70%;
-    height: 100%;
-  
+    left: 20%;
+    width: 60%;
+    height: 10vh;
     align-items: center;
     box-sizing: border-box;
+    z-index: 1;
 }
 
 .navbar:before,
@@ -169,10 +169,11 @@ p{
 
 .hero {
     height: 100vh; /* Full viewport height */
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('assets\\cute boat first year.jpg'); /* Replace with actual image */
+    background-image: url('assets\\cutest boat first year.jpg'); /* Replace with actual image */
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Fixes the image position */
