@@ -89,7 +89,6 @@ function updateImage(direction) {
         imgContainerPrev.classList.add("slide-right");
     }
 
-
     // After animation, update the image and reset class
     setTimeout(() => {
     if (direction === "next") {
@@ -111,6 +110,5 @@ function updateImage(direction) {
     imgContainerNext.classList.remove("slide-left", "slide-right");
     imgContainerPrev.classList.remove("slide-left", "slide-right");
     }, 1000); // Match with CSS transition duration
-
 }
 updateImage('init')

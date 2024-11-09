@@ -37,21 +37,29 @@ body, html {
     justify-content: center;
     justify-items: center;
     align-content: top;
+    overflow-y: scroll;/*Always have scroll so it doesn't spoint front page */
+}
+
+
+/* Firefox */
+#container {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(39, 171, 2, 0.455); /* Thumb color with no track */
 }
 
 
 /* Navbar container styling */
 .navbar {   
     grid-row:2;
-    position: absolute;
+    position: fixed;
     display: flex; /* keeps buttons in middle?*/
     
-    left: 15%;
-    width: 70%;
-    height: 100%;
-  
+    left: 25%;
+    width: 50%;
+    height: 10vh;
     align-items: center;
     box-sizing: border-box;
+    z-index: 1;
 }
 
 .navbar:before,
@@ -82,8 +90,8 @@ body, html {
     color: #059203bd;
     background-color: transparent;
     border: none;
-    border-radius: 5px;
-    font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+    border-radius: 40%;
+    font-size: clamp(0.6rem, 1.5vw, 1rem);
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -91,11 +99,13 @@ body, html {
 
 /* Hover effect for buttons */
 .navbar button:hover {
-    background-color: rgba(0, 51, 0, 0.8);
+    background-color: rgba(4, 137, 4, 0.304);
     color: #fff;
-    border-radius: 8px;
+    border-radius: 10%;
 }
-
+.navbar button:active {
+    background-color: rgba(4, 137, 4, 0.537);
+}
 h1 {
     font-size: 2rem;
     font-weight: bold;
@@ -115,6 +125,7 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 1px;
     padding-bottom: 10px;
+
 }
 
 h3 {
@@ -164,7 +175,26 @@ p{
 
 .toggles{
     display:none;
+    height: 500;
 }
+
+.hero {
+    height: 70vh; /* Full viewport height */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('assets\\cutest boat first year.jpg'); /* Replace with actual image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Fixes the image position */
+    color: white;
+    text-align: center;
+  }
+
+
+
+
 
 
 .gallery{
