@@ -13,11 +13,13 @@ document.addEventListener('click', (event) => {
     }
 });
 
+
+
+
 // --------------------------------------------------------------------------------------------------------------------------------
 // Load Content
 // -------------------------------------------------------------------------------------------------------------------------------
 const NAVBUTTONS = document.querySelectorAll('.navbar button');
-
 const pageMap = {
     'rsvp': './subpages/rsvp.html',
     'photo-gallery': './subpages/photo_gallery.html',
