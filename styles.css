@@ -48,8 +48,8 @@ body, html {
 
 /* Navbar container styling */
 .navbar {   
-    grid-row:2;
-    position: fixed;
+    grid-row:1;
+    position: relative;
     display: flex; /* keeps buttons in middle?*/
     left: 5%;
     width: 90%;
@@ -181,7 +181,6 @@ p{
     left: 0;
     height: 100vh; /* Adjust this as needed */
     width: 100vw;
-    background-color: red;
     background-image: url('assets/cutest boat first year.jpg'); /* Update with the correct path */
     background-size: cover; /* Ensures the image covers the entire area */
     background-position: center; /* Keeps the image centered */
