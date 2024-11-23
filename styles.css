@@ -35,6 +35,7 @@ body, html {
     justify-items: center;
     align-content: top;
     overflow-y: scroll;/*Always have scroll so it doesn't spoint front page */
+    
 }
 
 
@@ -176,35 +177,19 @@ p{
 }
 
 .hero {
-    position: fixed; /* Establish stacking context */
-    height: 70vh;
+    position: fixed; /* Makes the background stationary */
+    top: 0;
+    left: 0;
+    height: 100vh; /* Adjust this as needed */
     width: 100%;
-    overflow: hidden; /* Ensure child content doesn't overflow */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.hero::before {
-    content: "";
-    position: absolute;
-    width: 100vw;
-    background-image: url('assets/cutest%20boat%20first%20year.jpg'); /* Replace with actual image */
-    background-size: cover;
-    background-position: center;
-    transform: translateZ(0); /* Force GPU acceleration */
-    will-change: transform;
-    z-index: 0; /* Place behind content */
+    background-image: url('assets/cutest boat first year.jpg'); /* Update with the correct path */
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Keeps the image centered */
+    background-repeat: no-repeat; /* Prevents tiling */
+    z-index: -1; /* Places the background behind other content */
     opacity: 25%;
 }
 
-@media screen and (min-width: 768px) {
-    .hero::before {
-        position: fixed;
-        height: 100vh; /* Stretch image */
-    }
-}
 
 
 
