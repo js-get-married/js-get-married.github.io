@@ -176,11 +176,11 @@ p{
 }
 
 .hero {
-    position: absolute; /* Makes the background stationary */
+    position: fixed; /* Makes the background stationary */
     top: 0;
     left: 0;
     height: 100vh; /* Adjust this as needed */
-    width: 100%;
+    width: 100vw;
     background-color: red;
     background-image: url('assets/cutest boat first year.jpg'); /* Update with the correct path */
     background-size: cover; /* Ensures the image covers the entire area */
@@ -190,8 +190,6 @@ p{
     opacity: 25%;
     transform: translateZ(0);
 }
-
-
 
 
 
