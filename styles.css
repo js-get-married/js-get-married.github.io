@@ -35,7 +35,6 @@ body, html {
     justify-items: center;
     align-content: top;
     overflow-y: scroll;/*Always have scroll so it doesn't spoint front page */
-    
 }
 
 
@@ -286,7 +285,7 @@ p{
  
 
  @media (max-width: 768px) and (orientation: landscape) {
-    .hide-on-mobile {
+    .header {
         display: none; /* Hides the div on mobile portrait */
     }
 }
