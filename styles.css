@@ -63,7 +63,7 @@ body, html {
     color: #059203bd;
     background-color: transparent;
     border: none;
-    font-size: clamp(0.6rem, 1.5vw, 1rem);
+    font-size: clamp(.9rem, 1.5vw, 1.2rem);
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -105,7 +105,7 @@ body, html {
 h2 {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #2c3e50;
+    color: #5e3266;
     margin-bottom: 15px;
     letter-spacing: 1px;
     padding-bottom: 10px;
@@ -124,7 +124,7 @@ h2:hover {
 
 p{
     font-size: 1rem;
-    color: pink;
+    color: #301934;
     font-weight: normal;
     letter-spacing: none;
     padding-bottom: none;
@@ -182,8 +182,7 @@ p{
 }
 
 .schedule-item {
-    font-size: 1.6rem; /* Large and readable for mobile */
-    margin: 15px 0;
+    font-size: 0.8rem; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -202,8 +201,46 @@ p{
 .spacer {
     margin: 25px 0; /* Create extra spacing for section breaks */
     border: none;
-    height: 10px;
+    height: 0.5vh;
 }
+
+
+
+
+/* Styling for the centered content-text div */
+.content-text {
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.content-text p {
+    font-size: 1rem;
+    color: #301934;
+    font-weight: normal;
+    letter-spacing: normal; /* Corrected as 'none' is not valid */
+    margin-bottom: 15px;
+}
+
+/* Styling for the taxi list */
+.taxi-list {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+    margin: 10px 0 20px;
+}
+
+.taxi-list li {
+    font-size: 1rem;
+    color: #301934;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.taxi-list a {
+    color: #301934;
+    text-decoration: underline; /* Indicate links clearly */
+}
+
 
 
 .gallery{
