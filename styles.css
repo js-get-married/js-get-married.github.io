@@ -181,7 +181,7 @@ p{
     background-position: center; /* Keeps the image centered */
     background-repeat: no-repeat; /* Prevents tiling */
     z-index: -1; /* Places the background behind other content */
-    opacity: 25%;
+    opacity: 12%;
     transform: translateZ(0);
 }
 
