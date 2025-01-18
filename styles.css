@@ -19,12 +19,12 @@ body, html {
 
 .header{
     grid-row: 1;
-    position:relative;
+    position:fixed;
 }
 /* Navbar container styling */
 .navbar {   
     grid-row:1;
-    position: relative;
+    position: fixed;
     display: flex; /* keeps buttons in middle?*/
     left: 5%;
     width: 90%;
