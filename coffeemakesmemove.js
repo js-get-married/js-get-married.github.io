@@ -60,9 +60,12 @@ NAVBUTTONS.forEach(navbutton => {
                 // Replace the content inside #container
                 const container = document.getElementById('container');
                 container.innerHTML = data;
-
                 // Reapply any necessary JS or CSS
-                reinitializeDynamicContent();
+                container.style.display = 'none'; // Temporarily hide
+                container.offsetHeight; // Trigger a reflow
+                container.style.display = ''; // Show it again
+                // Example: Reapply styles or animations (if needed)
+                updateImage('init'); // Ensure image gallery functionality is reset
             })
             .catch(error => {
                 console.error('There was a problem with the fetch operation:', error);
@@ -70,29 +73,6 @@ NAVBUTTONS.forEach(navbutton => {
     };
 });
 
-/**
- * Reinitializes styles and JavaScript functionality for dynamically loaded content.
- */
-function reinitializeDynamicContent() {
-    // Example: Force layout recalculation for #container
-    const container = document.getElementById('container');
-    container.style.display = 'none'; // Temporarily hide
-    container.offsetHeight; // Trigger a reflow
-    container.style.display = ''; // Show it again
-
-    // Example: Reattach event listeners to headings
-    document.querySelectorAll('.heading').forEach(heading => {
-        heading.addEventListener('click', () => {
-            const section = heading.closest('.section');
-            section.querySelectorAll('.toggles').forEach(content => {
-                content.style.display = (content.style.display === 'none' || content.style.display === '') ? 'block' : 'none';
-            });
-        });
-    });
-
-    // Example: Reapply styles or animations (if needed)
-    updateImage('init'); // Ensure image gallery functionality is reset
-}
 
 
 // --------------------------------------------------------------------------------------------------------------------------------
