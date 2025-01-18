@@ -1,16 +1,4 @@
 // --------------------------------------------------------------------------------------------------------------------------------
-// Initial reload to fix scrolling issues
-// --------------------------------------------------------------------------------------------------------------------------------
-
-document.addEventListener('DOMContentLoaded', () => {
-    const container = document.getElementById('container');
-    container.style.display = 'none'; // Temporarily hide the container
-    container.offsetHeight; // Trigger a reflow
-    container.style.display = ''; // Show it again
-});
-
-
-// --------------------------------------------------------------------------------------------------------------------------------
 // Collapse Functionality
 // --------------------------------------------------------------------------------------------------------------------------------
 document.addEventListener('click', (event) => {
