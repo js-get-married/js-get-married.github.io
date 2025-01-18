@@ -49,10 +49,11 @@ NAVBUTTONS.forEach(navbutton => {
                 const container = document.getElementById('container');
                 container.innerHTML = data;
 
-                container.style.overflow = ''; // Reset overflow to ensure it's not overridden
-                container.offsetHeight; // Trigger a reflow
-                container.style.overflow = 'auto'; // Reapply the intended overflow value (or 'scroll', depending on your needs)
-
+                const firstHeading = document.querySelector('.section .heading');
+                if (firstHeading) {
+                 // Trigger click event on the first heading to show its toggle content
+                    firstHeading.click();
+                }
                 // Reapply any necessary JS or CSS
                 container.style.display = 'none'; // Temporarily hide
                 container.offsetHeight; // Trigger a reflow
@@ -66,6 +67,21 @@ NAVBUTTONS.forEach(navbutton => {
     };
 });
 
+
+
+
+// --------------------------------------------------------------------------------------------------------------------------------
+// Click first heading
+// --------------------------------------------------------------------------------------------------------------------------------
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const firstHeading = document.querySelector('.section .heading');
+    if (firstHeading) {
+        // Trigger click event on the first heading to show its toggle content
+        firstHeading.click();
+    }
+});
 
 
 // --------------------------------------------------------------------------------------------------------------------------------
