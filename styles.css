@@ -9,7 +9,7 @@ body, html {
     color: #333;
     
     display: grid;
-    grid-template-rows: 10vh 90vh; /* 15% for the top bar, remaining for main content */
+    grid-template-rows: 10vh 90vh; 
     height: 100vh; /* Full viewport height */
     /* Global
     display: flex;
@@ -21,6 +21,62 @@ body, html {
     grid-row: 1;
     position:relative;
 }
+/* Navbar container styling */
+.navbar {   
+    grid-row:1;
+    position: relative;
+    display: flex; /* keeps buttons in middle?*/
+    left: 5%;
+    width: 90%;
+    height: 10vh;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.navbar:before,
+.navbar:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 5px; /* Thin line height */
+    background-color: #4E7A51; /* Light, semi-transparent color */
+}
+
+.navbar:before {
+    top: 1vh; /* Position top bar */
+    grid-row: 1;
+}
+
+.navbar:after {
+    bottom: 1vh; /* Position bottom bar */
+    grid-row: 3;
+}
+
+/* Button styling */
+.navbar button {
+    height: 60%;
+    flex: 1;
+    color: #059203bd;
+    background-color: transparent;
+    border: none;
+    font-size: clamp(0.6rem, 1.5vw, 1rem);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.navbar button:hover {
+    background-color: rgba(4, 137, 4, 0.304);
+    color: #fff;
+    border-radius: 10%;
+}
+.navbar button:active {
+    background-color: rgba(4, 137, 4, 0.537);
+}
+
 
 #container {
     grid-row: 2;
@@ -42,64 +98,6 @@ body, html {
     scrollbar-color: rgba(39, 171, 2, 0.455); /* Thumb color with no track */
 }
 
-
-/* Navbar container styling */
-.navbar {   
-    grid-row:1;
-    position: relative;
-    display: flex; /* keeps buttons in middle?*/
-    left: 5%;
-    width: 90%;
-    height: 10vh;
-    align-items: center;
-    box-sizing: border-box;
-    z-index: 1;
-}
-
-.navbar:before,
-.navbar:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 4px; /* Thin line height */
-    background-color: rgba(0, 62, 3, 0.992); /* Light, semi-transparent color */
-}
-
-.navbar:before {
-    top: 1vh; /* Position top bar */
-    grid-row: 1;
-}
-
-.navbar:after {
-    bottom: 1vh; /* Position bottom bar */
-    
-    grid-row: 3;
-}
-
-/* Button styling */
-.navbar button {
-    height: 60%;
-    flex: 1;
-    color: #059203bd;
-    background-color: transparent;
-    border: none;
-    border-radius: 40%;
-    font-size: clamp(0.6rem, 1.5vw, 1rem);
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-/* Hover effect for buttons */
-.navbar button:hover {
-    background-color: rgba(4, 137, 4, 0.304);
-    color: #fff;
-    border-radius: 10%;
-}
-.navbar button:active {
-    background-color: rgba(4, 137, 4, 0.537);
-}
 h1 {
     font-size: 2rem;
     font-weight: bold;
@@ -178,7 +176,7 @@ p{
     left: 0;
     height: 100vh; /* Adjust this as needed */
     width: 100vw;
-    background-image: url('assets/cutest boat first year.jpg'); /* Update with the correct path */
+    background-image: url('assets/mapymapsmap.png'); /* Update with the correct path */
     background-size: cover; /* Ensures the image covers the entire area */
     background-position: center; /* Keeps the image centered */
     background-repeat: no-repeat; /* Prevents tiling */
