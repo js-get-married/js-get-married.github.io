@@ -83,7 +83,7 @@ body, html {
     grid-row: 2;
     position:relative;
     width:100%; 
-    height:100%;
+    height: calc(100% - 10vh); /* Explicit height adjustment for the header */
     border: none;
     text-align: center;
     justify-content: center;
