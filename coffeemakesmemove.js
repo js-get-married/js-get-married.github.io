@@ -48,6 +48,11 @@ NAVBUTTONS.forEach(navbutton => {
                 // Replace the content inside #container
                 const container = document.getElementById('container');
                 container.innerHTML = data;
+
+                container.style.overflow = ''; // Reset overflow to ensure it's not overridden
+                container.offsetHeight; // Trigger a reflow
+                container.style.overflow = 'auto'; // Reapply the intended overflow value (or 'scroll', depending on your needs)
+
                 // Reapply any necessary JS or CSS
                 container.style.display = 'none'; // Temporarily hide
                 container.offsetHeight; // Trigger a reflow
