@@ -4,7 +4,7 @@
 // --------------------------------------------------------------------------------------------------------------------------------
 document.addEventListener('click', (event) => {
     // Check if the clicked element has the 'header' class
-    if (event.target.classList.contains('header')) {
+    if (event.target.classList.contains('heading')) {
         const section = event.target.closest('.section');
         section.querySelectorAll('.toggles').forEach(content => {
             // Toggle display
