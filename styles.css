@@ -101,18 +101,9 @@ body, html {
     scrollbar-color: rgba(39, 171, 2, 0.455); /* Thumb color with no track */
 }
 
-h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #2c3e50;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-    padding-top: 40px;
-    text-align: center;
-}
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #2c3e50;
     margin-bottom: 15px;
@@ -121,23 +112,15 @@ h2 {
 
 }
 
-h3 {
-    font-size: 1.5rem;
-    font-weight: normal;
-    color: #34495e;
-    margin-bottom: 2%;
-}
 
-h2, h3 {
+h2{
     transition: color 0.3s ease;
 }
 
-h2:hover,h3:hover {
+h2:hover {
     color: #2980b9;
 }
-h2:hover +.bar {
-    background-color: #2980b9; /* separate rule, otherwise h2's background changes too! */
-}
+
 
 p{
     font-size: 1rem;
@@ -167,7 +150,7 @@ p{
 
 .toggles{
     display:none;
-    height: 500;
+    height: auto;
 }
 
 .hero {
@@ -185,6 +168,42 @@ p{
     transform: translateZ(0);
 }
 
+
+
+
+.schedule-container {
+    padding: 20px;
+}
+
+.schedule-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.schedule-item {
+    font-size: 1.6rem; /* Large and readable for mobile */
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.schedule-item .time {
+    font-weight: bold;
+    color: #6a0dad; /* Slightly brighter purple for contrast */
+    margin-bottom: 5px;
+}
+
+.schedule-item .event {
+    font-style: italic;
+}
+
+.spacer {
+    margin: 25px 0; /* Create extra spacing for section breaks */
+    border: none;
+    height: 10px;
+}
 
 
 .gallery{
