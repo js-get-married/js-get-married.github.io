@@ -38,17 +38,16 @@ const pageMap = {
     'faq': './subpages/faq.html',
 };
 
-let pagerequested = 'home'
-
+let pagerequested = 'home';
 
 NAVBUTTONS.forEach(navbutton => {
     navbutton.onclick = function() {
-// Check if the navbutton.id exists in the pageMap
-    if (pageMap[navbutton.id]) {
-        pagerequested = pageMap[navbutton.id]; // Assign the corresponding page URL
-    } else {
-        pagerequested = pageMap['home'];; // Exit if the condition is not met
-    }
+        // Check if the navbutton.id exists in the pageMap
+        if (pageMap[navbutton.id]) {
+            pagerequested = pageMap[navbutton.id]; // Assign the corresponding page URL
+        } else {
+            pagerequested = pageMap['home']; // Default to 'home'
+        }
 
         fetch(pagerequested)
             .then(response => {
@@ -58,13 +57,42 @@ NAVBUTTONS.forEach(navbutton => {
                 return response.text();
             })
             .then(data => {
-                document.getElementById('container').innerHTML = data; // Load the content
-                updateImage('init')
+                // Replace the content inside #container
+                const container = document.getElementById('container');
+                container.innerHTML = data;
+
+                // Reapply any necessary JS or CSS
+                reinitializeDynamicContent();
             })
             .catch(error => {
                 console.error('There was a problem with the fetch operation:', error);
             });
-}});
+    };
+});
+
+/**
+ * Reinitializes styles and JavaScript functionality for dynamically loaded content.
+ */
+function reinitializeDynamicContent() {
+    // Example: Force layout recalculation for #container
+    const container = document.getElementById('container');
+    container.style.display = 'none'; // Temporarily hide
+    container.offsetHeight; // Trigger a reflow
+    container.style.display = ''; // Show it again
+
+    // Example: Reattach event listeners to headings
+    document.querySelectorAll('.heading').forEach(heading => {
+        heading.addEventListener('click', () => {
+            const section = heading.closest('.section');
+            section.querySelectorAll('.toggles').forEach(content => {
+                content.style.display = (content.style.display === 'none' || content.style.display === '') ? 'block' : 'none';
+            });
+        });
+    });
+
+    // Example: Reapply styles or animations (if needed)
+    updateImage('init'); // Ensure image gallery functionality is reset
+}
 
 
 // --------------------------------------------------------------------------------------------------------------------------------
