@@ -53,6 +53,7 @@ NAVBUTTONS.forEach(navbutton => {
                 if (firstHeading) {
                  // Trigger click event on the first heading to show its toggle content
                     firstHeading.click();
+                    firstHeading.click();
                 }
                 // Reapply any necessary JS or CSS
                 container.style.display = 'none'; // Temporarily hide
