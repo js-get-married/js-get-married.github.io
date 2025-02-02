@@ -40,10 +40,9 @@ const pageMap = {
     'rsvp': './subpages/rsvp.html',
     'photo-gallery': './subpages/photo_gallery.html',
     'info': './subpages/information.html',
-    'faq': './subpages/faq.html',
 };
 
-let pagerequested = 'home';
+let pagerequested = 'info';
 
 NAVBUTTONS.forEach(navbutton => {
     navbutton.onclick = function() {
@@ -85,7 +84,10 @@ NAVBUTTONS.forEach(navbutton => {
     };
 });
 
-
+// Load info.html on page load
+window.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('info').click();
+});
 
 
 // --------------------------------------------------------------------------------------------------------------------------------
