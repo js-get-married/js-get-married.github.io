@@ -2,6 +2,12 @@
 // Collapse Functionality
 // --------------------------------------------------------------------------------------------------------------------------------
 document.addEventListener('click', (event) => {
+     // close other sections
+     document.querySelectorAll('.toggles').forEach(content => {
+        // Toggle display
+        content.style.display = (content.style.display === 'block') ? 'none' :  content.style.display;
+    });
+    
     // Check if the clicked element has the 'header' class
     if (event.target.classList.contains('heading')) {
         const section = event.target.closest('.section');
@@ -9,6 +15,10 @@ document.addEventListener('click', (event) => {
             // Toggle display
             content.style.display = (content.style.display === 'none' || content.style.display === '') ? 'block' : 'none';
         });
+
+       
+
+
     }
 });
 
