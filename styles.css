@@ -83,7 +83,6 @@ body, html {
 #container {
     grid-row: 2;
     position:relative;
-    width:100%; 
     height: calc(100% - 10vh); /* Explicit height adjustment for the header */
     border: none;
     text-align: center;
@@ -109,6 +108,7 @@ h2 {
     margin-bottom: 15px;
     letter-spacing: 1px;
     padding-bottom: 10px;
+    padding-top:10px;
 
 }
 
@@ -151,6 +151,9 @@ p{
 .toggles{
     display:none;
     height: auto;
+    overflow: hidden;
+    max-height:0;
+    transition: max-height 0.4s ease-out;
 }
 
 .hero {
@@ -186,20 +189,20 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding:5;
 }
 
 .schedule-item .time {
     font-weight: bold;
     color: #6a0dad; /* Slightly brighter purple for contrast */
-    margin-bottom: 5px;
 }
 
 .schedule-item .event {
     font-style: italic;
+    margin-bottom: 5px;
 }
 
 .spacer {
-    margin: 25px 0; /* Create extra spacing for section breaks */
     border: none;
     height: 0.5vh;
 }
@@ -209,7 +212,7 @@ p{
 
 /* Styling for the centered content-text div */
 .content-text {
-    max-width: 80%;
+    max-width: 80vw;
     margin: 0 auto;
     text-align: left;
 }

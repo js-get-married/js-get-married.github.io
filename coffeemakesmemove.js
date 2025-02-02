@@ -2,14 +2,31 @@
 // Collapse Functionality
 // --------------------------------------------------------------------------------------------------------------------------------
 document.addEventListener('click', (event) => {
-    // Check if the clicked element has the 'header' class
-    if (event.target.classList.contains('heading')) {
-        const section = event.target.closest('.section');
-        section.querySelectorAll('.toggles').forEach(content => {
-            // Toggle display
-            content.style.display = (content.style.display === 'none' || content.style.display === '') ? 'block' : 'none';
-        });
+    if (!event.target.classList.contains('heading')) return;
+
+    const section = event.target.closest('.section');
+    const clickedToggles = section.querySelector('.toggles');
+    const allToggles = document.querySelectorAll('.toggles');
+
+    const prevScrollY = window.scrollY; // Save current scroll position
+
+    allToggles.forEach(content => {
+        if (content !== clickedToggles) {
+            content.style.display = 'none';
+            content.style.maxHeight = null;
+        }
+    });
+
+    // Toggle only the clicked section
+    if (clickedToggles.style.display === 'none' || !clickedToggles.style.display) {
+        clickedToggles.style.display = 'block';
+        clickedToggles.style.maxHeight = clickedToggles.scrollHeight + "px";
+    } else {
+        clickedToggles.style.display = 'none';
+        clickedToggles.style.maxHeight = null;
     }
+
+    window.scrollTo({ top: prevScrollY, behavior: 'slow' }); // Restore scroll position
 });
 
 
@@ -52,6 +69,7 @@ NAVBUTTONS.forEach(navbutton => {
                 const firstHeading = document.querySelector('.section .heading');
                 if (firstHeading) {
                  // Trigger click event on the first heading to show its toggle content
+                    firstHeading.click();
                     firstHeading.click();
                 }
                 // Reapply any necessary JS or CSS
