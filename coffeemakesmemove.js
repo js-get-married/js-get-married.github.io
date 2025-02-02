@@ -128,3 +128,27 @@ function updateImage(direction) {
     }, 1000); // Match with CSS transition duration
 }
 updateImage('init')
+
+// Swipe functionality
+function enableSwipe() {
+    const gallery = document.querySelector(".gallery");
+    let startX = 0;
+    let endX = 0;
+
+    gallery.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    gallery.addEventListener("touchmove", (e) => {
+        endX = e.touches[0].clientX;
+    });
+
+    gallery.addEventListener("touchend", () => {
+        const diffX = startX - endX;
+        if (Math.abs(diffX) > 50) { // Minimum swipe distance
+            updateImage(diffX > 0 ? "next" : "prev");
+        }
+    });
+}
+
+enableSwipe();
