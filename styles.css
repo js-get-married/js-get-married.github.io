@@ -185,7 +185,7 @@ p{
 }
 
 .schedule-item {
-    font-size: 0.8rem; 
+    font-size: 0.9rem; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -218,7 +218,7 @@ p{
 }
 
 .content-text p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #301934;
     font-weight: normal;
     letter-spacing: normal; /* Corrected as 'none' is not valid */
