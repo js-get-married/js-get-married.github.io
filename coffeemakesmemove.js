@@ -151,24 +151,15 @@ updateImage('init')
 
 // Swipe functionality
 function enableSwipe() {
+
+
+
     const gallery = document.querySelector(".gallery");
-    let startX = 0;
-    let endX = 0;
+    const hammer = new Hammer(element);
 
-    gallery.addEventListener("touchstart", (e) => {
-        startX = e.touches[0].clientX;
-    });
+    hammer.on("swipeleft", () =>  updateImage("next"));
+    hammer.on("swiperight", () =>  updateImage("prev"));
 
-    gallery.addEventListener("touchmove", (e) => {
-        endX = e.touches[0].clientX;
-    });
-
-    gallery.addEventListener("touchend", () => {
-        const diffX = startX - endX;
-        if (Math.abs(diffX) > 50) { // Minimum swipe distance
-            updateImage(diffX > 0 ? "next" : "prev");
-        }
-    });
 }
 
 enableSwipe();

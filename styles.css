@@ -345,6 +345,7 @@ p{
     }
     .max-on-mobile {
         height: 100vh;
+        scroll-padding-top: 0vh; /* Ensures scroll top is bottom of header*/
     }
 
 }
