@@ -9,7 +9,7 @@ body, html {
     color: #333;
     
     display: grid;
-    grid-template-rows: 10vh 90vh; 
+    grid-template-rows: auto 1fr; 
     height: 100vh; /* Full viewport height */
     overflow: hidden;
     /* Global
@@ -248,7 +248,7 @@ p{
 
 .gallery{
     display: grid;
-    grid-template-columns: 5% 90% 5%;
+    grid-template-columns: 10% 80% 10%;
     height: 100%;
     width: 100%;
 }
@@ -342,5 +342,6 @@ p{
  @media (max-width: 768px) and (orientation: landscape) {
     .hide-on-mobile {
         display: none; /* Hides the div on mobile portrait */
+        height:none;
     }
 }
