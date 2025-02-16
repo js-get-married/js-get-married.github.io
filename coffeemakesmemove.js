@@ -155,7 +155,7 @@ function enableSwipe() {
 
 
     const gallery = document.querySelector(".gallery");
-    const hammer = new Hammer(element);
+    const hammer = new Hammer(gallery);
 
     hammer.on("swipeleft", () =>  updateImage("next"));
     hammer.on("swiperight", () =>  updateImage("prev"));
