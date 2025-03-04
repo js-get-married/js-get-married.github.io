@@ -95,7 +95,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // --------------------------------------------------------------------------------------------------------------------------------
 
 // This object is generated programatically by a python script in utils
-const images = ["assets\\big squad first year.jpg","assets\\boat first year.jpg","assets\\cute boat first year.jpg","assets\\cutest boat first year.jpg","assets\\cutest fancy second year.jpg","assets\\lost 2 the lostening.jpg","assets\\Lost.jpg","assets\\more best boat first year.jpg","assets\\paint bop.jpg","assets\\The original cc-rew second year fancy.jpg",]; 
+const images = ["assets\\1 cute boat first year.jpg","assets\\10987415_825216527552302_5296948007076857803_o.jpg","assets\\4cbae2c5-c56d-4521-a95f-5ce5510180f1.jpg","assets\\4f24da01-fc79-4c57-b5fd-9ac770f59c16.jpg","assets\\big squad first year.jpg","assets\\boat first year.jpg","assets\\cutest boat first year.jpg","assets\\cutest fancy second year.jpg","assets\\DSCF0211.jpg","assets\\DSCF0817.jpg","assets\\fe851ce7-29cb-4dec-8175-9a5615baede0.jpg","assets\\IMG_0055.jpg","assets\\IMG_3741.jpg","assets\\IMG_3922.jpg","assets\\IMG_4490.jpg","assets\\IMG_4762.jpg","assets\\IMG_4832.jpg","assets\\IMG_6537.jpg","assets\\IMG_7373.jpg","assets\\IMG_7449.jpg","assets\\IMG_7462.jpg","assets\\IMG_7548.jpg","assets\\IMG_7564.jpg","assets\\IMG_7878.jpg","assets\\IMG_8276.jpg","assets\\lost 2 the lostening.jpg","assets\\Lost.jpg","assets\\more best boat first year.jpg","assets\\P1070892.jpg","assets\\paint bop.jpg","assets\\push.jpg","assets\\The original cc-rew second year fancy.jpg",]; 
 //
 
 let img_index =0;
